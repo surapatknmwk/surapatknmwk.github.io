@@ -1,24 +1,21 @@
-# surapatknmwk.github.io
 
-echo "# surapatknmwk.github.io" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:surapatknmwk/surapatknmwk.github.io.git
-git push -u origin main
+# create repo github to build gitHub pages
+/<username>.github.io -> use url (https://<username>.github.io/) 
+or 
+/<pathname> ->  use url (https://<username>.github.io/<context name>/)
 
 
-git remote add origin git@github.com:surapatknmwk/surapatknmwk.github.io.git
-git branch -M main
+1.my repo -> setting -> pages -> chick visit -> show page readme.txt render (testing)
 
+2.git clone to local -> coppy project / create project in the repo git -> npm run serve (testing) -> npm run build
 
-git add --all
+3.edit file ignore comment #/dist and save 
 
-git commit -m "Initial commit"
+4.checking branch current main  
+    $ git checkout -b gh-pages -> 
+    $ npm run build -> 
+    $ git add dist -> 
+    $ git commit -m "deploy static repo" -> 
+    $ git subtree push --prefix dist origin gh-pages
 
-git push -u origin main
-
-git add dist
-git commit -m "Add Static"
-git subtree push --prefix dist origin gh-pages
+5.to github my repo -> setting -> pages -> set Branch = gh-pages -> save -> waiting process 
